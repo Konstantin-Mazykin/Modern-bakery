@@ -61,35 +61,40 @@
                             обслуговування!
                         </p>
                     </div>
-                    <img src="./images/baker-with-fresh-bread.jpg"
+                    <img class="baker-photo" src="./images/baker-with-fresh-bread.jpg"
                         alt="Пекар з усмішкою транспотрує стійку зі свіжим хлібом">
                 </div>
             </div>
         </section>
         <section class="section" id="chefs-section">
             <div class="container">
-                <h2 class="chef-title section-title">Наші найкращі <span class="accent">шеф -кухарі</span></h2>
-                <ul>
+                <h2 class="chef-title section-title centered">Наші найкращі <span class="accent">шеф -кухарі</span></h2>
+                <ul class="chef-container">
                     <li>
-                        <article>
-                            <img src="./images/chef-women.jpg"
+                        <article class="chef-card">
+                            <img class="chef-photo" src="./images/chef-women.jpg"
                                 alt="Жінка пекарь посміхається та тримає тарілку зі стравою">
-                            <h3 class="chef-name">Настя</h3>
-                            <p>Привіт, я Настя!</p>
-                            <p>Вже 10 років, я свтілюю у життя цікаві та смачні ідеї.</p>
-                            <p>Я випічу для вас найсмачніщі вироби!</p>
+                            <div class="chef-discription">
+                                <h3 class="chef-name">Настя</h3>
+                                <p>Привіт, я Настя!</p>
+                                <p>Вже 10 років, я свтілюю <br>у життя цікаві та смачні ідеї.</p>
+                                <p>Я випічу для вас найсмачніщі вироби!</p>
+                            </div>
                         </article>
                     </li>
                     <li>
-                        <article>
-                            <img src="./images/chef-men.jpg" alt="Пекар чоловік працює з тестом">
-                            <h3 class="chef-name">Влад</h3>
-                            <p>Привіт, я Влад!</p>
-                            <p>Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша любов, з якою ми ділимось кожен
-                                раз
-                                з Вами
-                                через нашу випічку!</p>
-                            <p>Я зроблю для вас унікальну начинку на будь який смак!</p>
+                        <article class="chef-card">
+                            <img class="chef-photo" src="./images/chef-men.jpg" alt="Пекар чоловік працює з тестом">
+                            <div class="chef-discription">
+                                <h3 class="chef-name">Влад</h3>
+                                <p>Привіт, я Влад!</p>
+                                <p>Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша любов, з якою ми ділимось
+                                    кожен
+                                    раз
+                                    з Вами
+                                    через нашу випічку!</p>
+                                <p>Я зроблю для вас унікальну начинку на будь який смак!</p>
+                            </div>
                         </article>
                     </li>
                 </ul>
@@ -97,7 +102,12 @@
         </section>
         <section class="section" id="format-section">
             <div class="container">
-                <h2 class="format-title section-title">Формати</h2>
+                <h2 class="format-title section-title centered">Формати</h2>
+                <button class="back-button" type="button">
+                    <svg class="formats-arrow">
+                        <use href="./images/icons.svg#icon-arrow"></use>
+                    </svg>
+                </button>
                 <ul class="format-list">
                     <li class="format-item">
                         <article class="format-card">
@@ -133,6 +143,11 @@
                         </article>
                     </li>
                 </ul>
+                <button class="forvard-button" type="button">
+                    <svg class="formats-arrow">
+                        <use href="./images/icons.svg#icon-arrow"></use>
+                    </svg>
+                </button>
             </div>
         </section>
         <section class="section" id="contacts-section">
@@ -171,8 +186,15 @@
                             Січових
                             Стрільців 54</a>
                     </li>
-                    <li><a href="#"><img src="./images/facebook-icon.svg" alt="Посилання на сторінку Fasebook"></a></li>
-                    <li><a href="#"><img src="./images/instagram-icon.svg" alt="Посилання на сторінку Instagram"></a>
+                    <li><a href="#">
+                            <svg class="adress-icon">
+                                <use href="./images/icons.svg#icon-facebook">Посилання на сторінку Fasebook</use>
+                            </svg>
+                    </li>
+                    <li><a href="#">
+                            <svg class="adress-icon">
+                                <use href="./images/icons.svg#icon-instagram">Посилання на сторінку Instagram</use>
+                            </svg>
                     </li>
                 </ul>
             </address>
