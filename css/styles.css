@@ -41,11 +41,7 @@
 }
 
 body {
-    /* width: 100%;
-    max-width: 1440px; */
-    /* margin: 0 auto;  */
     color: var(--color-primary-dark);
-    /* background-color: var(--color-primary-light); */
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -57,13 +53,6 @@ main {
     max-width: 1440px;
     margin: 0 auto;
     background-color: var(--color-primary-light);
-}
-
-.container {
-    width: 100%;
-    max-width: 1288px;
-    margin: 0 auto;
-    padding: 0 24px;
 }
 
 address {
@@ -94,14 +83,6 @@ ul {
     color: var(--color-brand-dark);
 }
 
-.accent {
-    color: var(--color-brand-normal);
-}
-
-.section {
-    padding: 48px 0;
-}
-
 .visually-hidden {
     position: absolute;
     left: -10000px;
@@ -109,24 +90,6 @@ ul {
     width: 1px;
     height: 1px;
     overflow: hidden;
-}
-
-/* -- buttons -- */
-.button {
-    padding: 16px 32px;
-    background-color: var(--color-brand-normal);
-    color: var(--color-primary-light);
-    border: 2px solid var(--color-brand-normal);
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.button:hover {
-    background-color: transparent;
-    color: var(--color-brand-dark);
-    font-weight: 600;
 }
 
 /* -- header section -- */
