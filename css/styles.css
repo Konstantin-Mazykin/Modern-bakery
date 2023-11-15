@@ -33,6 +33,7 @@
     --color-primary-light: #FAF4EA;
     --color-primary-dark: #31261A;
     --color-decoration: #A18268;
+    --color-modal-fon: #31261a66;
 }
 
 /* -- general properties -- */
@@ -88,6 +89,7 @@ ul {
     cursor: pointer;
     font-size: 18px;
     font-weight: 600;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 .button:hover {
@@ -131,11 +133,18 @@ ul {
 }
 
 /* -- header section -- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
+}
+
 .header-container {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-top: 32px;
 }
 
 .header-nav {
@@ -155,6 +164,7 @@ ul {
 .header-link {
     color: var(--color-primary-light);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .header-link:hover {
@@ -164,7 +174,7 @@ ul {
 
 /* -- general section -- */
 .general-section {
-    background-image: url(../images/header-background.jpg);
+    background-image: linear-gradient(103deg, #121211c7 2.03%, #12121199 58.46%, #12121100 90.36%), url(../images/header-background.jpg);
     background-position: center;
     background-size: cover;
     padding: 272px 0;
@@ -243,15 +253,26 @@ ul {
 
 /* -- chefs section -- */
 .chef-title {
+    position: relative;
     margin: 0 auto 80px;
-    max-width: 520px;
+    text-align: center;
 }
 
 .chef-title::before, .chef-title::after {
-    display: block;
+    position: absolute;
+    bottom: 24px;
+    /* display: block; */
     width: 352px;
     border: 2px solid var(--color-brand-light);
     content: '';
+}
+
+.chef-title::before {
+    left: 0;
+}
+
+.chef-title::after {
+    right: 0;
 }
 
 .chef-name {
@@ -334,6 +355,11 @@ ul {
     padding: 24px;
     padding-top: 250px;
     border-radius: 16px;
+    transition: transform 0.3s;
+}
+
+.format-card:hover {
+    transform: scale(1.03);
 }
 
 .arrow {
@@ -353,6 +379,7 @@ ul {
     border: 1px solid var(--color-primary-dark);
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .back-button .arrow {
@@ -409,6 +436,29 @@ ul {
     max-width: 1440px;
     margin: 0 auto;
     padding: 32px 0;
+    position: relative;
+}
+
+.footer::before,
+.footer::after {
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: '';
+}
+
+.footer::before {
+    width: 180px;
+    height: 120px;
+    left: 0;
+    background-image: url(../images/footer-decor-small.png);
+}
+
+.footer::after {
+    width: 380px;
+    height: 190px;
+    right: 0;
+    background-image: url(../images/footer-bdecore-large.png);
 }
 
 .footer-container {
@@ -445,6 +495,7 @@ ul {
 .footer-social {
     display: flex;
     flex-direction: row;
+    gap: 22px;
 }
 
 .adress-icon {
@@ -461,4 +512,52 @@ ul {
     color: #A28268;
     font-weight: 400;
     font-size: 14px;
+}
+
+/* -- modal window -- */
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--color-modal-fon);
+    padding: 20px 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.backdrop.is-hidden {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-window {
+    position: relative;
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+    text-align: center;
+    padding-top: 128px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: var(--color-primary-light);
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+}
+
+.modal-text {
+    color: var(--color-brand-dark);
 }
