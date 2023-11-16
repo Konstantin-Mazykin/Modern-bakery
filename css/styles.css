@@ -132,6 +132,18 @@ ul {
     overflow: hidden;
 }
 
+.warning-about-consent {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-primary-dark);
+}
+
+.warning-about-consent a {
+    color: var(--color-primary-dark);
+    text-underline-offset: 2px;
+}
+
 /* -- header section -- */
 .header {
     position: absolute;
@@ -474,6 +486,7 @@ ul {
 .footer-link {
     color: var(--color-primary-light);
     text-decoration: none;
+    margin-bottom: 16px;
 }
 
 .addres-link {
@@ -481,6 +494,7 @@ ul {
     font-weight: 300;
     font-size: 16px;
     text-decoration: none;
+    margin-bottom: 16px;
 }
 
 .footer-link:hover, .addres-link:hover {
@@ -539,8 +553,8 @@ ul {
     max-height: 880px;
     background-color: var(--color-primary-light);
     border-radius: 32px;
-    text-align: center;
-    padding-top: 128px;
+    padding: 128px 136px;
+    overflow: auto;
 }
 
 .modal-close {
@@ -550,9 +564,83 @@ ul {
     background-color: var(--color-primary-light);
     cursor: pointer;
     border: none;
-    font-size: 18px;
+    font-size: 28px;
+    transition: transform 0.5s;
+    transition-timing-function: linear;
+}
+
+.modal-close:hover {
+    transform: scale(0.9);
+}
+
+.section-title.modal {
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .modal-text {
     color: var(--color-brand-dark);
+    text-align: center;
+}
+
+/* -- contact form --*/
+.contact-form {
+    margin-bottom: 24px;
+}
+
+.form-input {
+    padding: 16px 42px;
+    width: 100%;
+    border: 1px solid var(--color-decoration);
+    border-radius: 8px;
+    background-color: transparent;
+    outline: none;
+    font-size: 20px;
+    line-height: 1.175;
+}
+
+.form-input:hover {
+    border-color: var(--color-brand-normal);
+}
+
+/* -- animation label -- */
+
+/* .form-label {
+    position: absolute;
+    top: 16px;
+    left: 42px;
+    display: block;
+    color: var(--color-decoration);
+    font-size: 16px;
+    line-height: 1.175;
+    transition: transform 0.3s;
+} 
+*/
+
+/* .form-field:focus-within .form-label {
+    transform: translate(-36px, -40px);
+} 
+
+.form-field {
+    position: relative;
+}
+*/
+
+.form-field {
+    margin-bottom: 32px;
+}
+
+.form-input::placeholder {
+    color: var(--color-decoration);
+    font-size: 16px;
+    line-height: 1.175;
+}
+
+.form-input:hover::placeholder {
+    color: var(--color-primary-dark);
+}
+
+.submit-button {
+    display: block;
+    margin: 0 auto;
 }

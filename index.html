@@ -160,10 +160,26 @@
                     <div class="contacts-form">
                         <h2 class="contacts-title section-title">Приєднуйся до мережі пекарень</h2>
                         <p class="contacts-text">Заповни форму, щоб ми звʼязались з тобою!</p>
-                        <!-- contacts form -->
-                        <button class="button" type="submit">Замовити дзвінок</button>
-                        <p class="warning-about-consent">Натискаючи на кнопку я погоджуюсь з політикою конфіденційності
-                        </p>
+                        <form class="contact-form" name="contact-form" autocomplete="on">
+                            <div class="form-field">
+                                <label class="visually-hidden form-label" for="usre-name">Ім’я</label>
+                                <input class="form-input" type="text" id="usre-name" name="usre-name"
+                                    placeholder="Ім’я">
+                            </div>
+                            <div class="form-field">
+                                <label class="visually-hidden form-label" for="usre-tel">Телефон</label>
+                                <input class="form-input" type="tel" id="usre-tel" name="usre-tel"
+                                    placeholder="Телефон">
+                            </div>
+                            <div class="form-field">
+                                <label class="visually-hidden form-label" for="usre-email">Електронна пошта</label>
+                                <input class="form-input" type="email" id="usre-email" name="usre-email"
+                                    placeholder="Електронна пошта">
+                            </div>
+                            <button class="submit-button button" type="submit">Замовити дзвінок</button>
+                        </form>
+                        <p class="warning-about-consent">Натискаючи на кнопку я погоджуюсь <br><a href="#">з політикою
+                                конфіденційності</a> </p>
                     </div>
                     <iframe class="contact-map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.0820265657023!2d30.491233500000003!3d50.4566697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0YPQuy4g0KHQtdGH0LXQstGL0YUg0KHRgtGA0LXQu9GM0YbQvtCyLCA1NCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1699083415502!5m2!1sru!2sua"
@@ -225,15 +241,31 @@
         </div>
     </footer>
 
-    <div class="backdrop is-hidden">
+    <div class="backdrop">
         <div class="modal-window">
             <button class="modal-close" type="button">
-                Close
+                &#x2573;
             </button>
-            <h2 class="section-title">Замовити дзвінок</h2>
+            <h2 class="section-title modal">Замовити дзвінок</h2>
             <p class="modal-text">Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-            <button class="button" type="submit">Замовити дзвінок</button>
-            <p class="warning-about-consent">Натискаючи на кнопку я погоджуюсь з політикою конфіденційності</p>
+            <form class="contact-form" name="contact-form" autocomplete="on">
+                <div class="form-field">
+                    <label class="visually-hidden form-label" for="usre-name">Ім’я</label>
+                    <input class="form-input" type="text" id="usre-name" name="usre-name" placeholder="Ім’я">
+                </div>
+                <div class="form-field">
+                    <label class="visually-hidden form-label" for="usre-tel">Телефон</label>
+                    <input class="form-input" type="tel" id="usre-tel" name="usre-tel" placeholder="Телефон">
+                </div>
+                <div class="form-field">
+                    <label class="visually-hidden form-label" for="usre-email">Електронна пошта</label>
+                    <input class="form-input" type="email" id="usre-email" name="usre-email"
+                        placeholder="Електронна пошта">
+                </div>
+                <button class="submit-button button" type="submit">Замовити дзвінок</button>
+            </form>
+            <p class="warning-about-consent">Натискаючи на кнопку я погоджуюсь <br><a href="#">з політикою
+                    конфіденційності</a></p>
         </div>
     </div>
 
