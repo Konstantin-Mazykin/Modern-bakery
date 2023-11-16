@@ -417,11 +417,6 @@ ul {
     color: var(--color-brand-dark);
 }
 
-.warning-about-consent {
-    font-size: 12px;
-    text-align: center;
-}
-
 .contacts-section {
     padding-bottom: 96px;
 }
