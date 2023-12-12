@@ -14,7 +14,7 @@
         rel="stylesheet"> -->
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
@@ -121,6 +121,7 @@
                                     <p>Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби</p>
                                     <p>Посадкові місця: є</p>
                                 </div>
+                                <img class="format-image" src="./images/walrus-fon.jpg" alt="Walrus format">
                             </article>
                         </li>
                         <li class="format-item">
@@ -132,6 +133,7 @@
                                     <p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
                                     <p>Посадкові місця: відсутні</p>
                                 </div>
+                                <img class="format-image" src="./images/horseshoe-fon.jpg" alt="Horseshoe format">
                             </article>
                         </li>
                         <li class="format-item">
@@ -143,6 +145,7 @@
                                     <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
                                     <p>Посадкові місця: відсутні</p>
                                 </div>
+                                <img class="format-image" src="./images/handlebar-fon.jpg" alt="Handlebar format">
                             </article>
                         </li>
                     </ul>
@@ -251,18 +254,28 @@
             <form class="contact-form" name="contact-form" autocomplete="on">
                 <div class="form-field">
                     <label class="visually-hidden form-label" for="usre-name">Ім’я</label>
-                    <input class="form-input" type="text" id="usre-name" name="usre-name" placeholder="Ім’я">
+                    <input class="form-input" type="text" id="usre-name" name="usre-name" minlength="2" maxlength="20"
+                        placeholder="Ім’я" required>
                 </div>
                 <div class="form-field">
                     <label class="visually-hidden form-label" for="usre-tel">Телефон</label>
-                    <input class="form-input" type="tel" id="usre-tel" name="usre-tel" placeholder="Телефон">
+                    <input class="form-input" type="tel" id="usre-tel" name="usre-tel" placeholder="Телефон"
+                        pattern="^\+[0-9]{12}" required>
                 </div>
                 <div class="form-field">
                     <label class="visually-hidden form-label" for="usre-email">Електронна пошта</label>
                     <input class="form-input" type="email" id="usre-email" name="usre-email"
-                        placeholder="Електронна пошта">
+                        placeholder="Електронна пошта" required>
                 </div>
+
+                <!-- <div class="checkbox">
+                    <input class="checkbox-input" type="checkbox" id="terms-contitions" name="terms-contitions">
+                    <label class="checkbox-label warning-about-consent" for="terms-contitions">Я погоджуюсь з політикою
+                        конфіденційності</label>
+                </div> -->
+
                 <button class="submit-button button" type="submit">Замовити дзвінок</button>
+                <!-- <button class="submit-button button" type="submit" disabled>Замовити дзвінок</button> -->
             </form>
             <p class="warning-about-consent">Натискаючи на кнопку я погоджуюсь <br><a href="#">з політикою
                     конфіденційності</a></p>

@@ -98,6 +98,14 @@ ul {
     font-weight: 600;
 }
 
+/* .button[disabled]  */
+.button:disabled {
+    color: gray;
+    background-color: lightgray;
+    border-color: currentColor;
+    cursor: not-allowed;
+}
+
 .container {
     width: 100%;
     max-width: 1288px;
@@ -294,7 +302,8 @@ ul {
 }
 
 .chef-photo {
-    max-width: 245px;
+    max-width: 240px;
+    height: 390px;
     border-radius: 4px 4px 4px 200px;
     box-shadow: -27px 16px 0 0 var(--color-primary-light), -27px 16px 0 1px var(--color-decoration);
 }
@@ -642,5 +651,36 @@ ul {
 
 .submit-button {
     display: block;
-    margin: 0 auto;
+    margin: 32px auto 0;
+}
+
+/* -- castom checkbox -- */
+.checkbox {
+    position: relative;
+}
+
+.checkbox-input {
+    appearance: none;
+}
+
+.checkbox-label {
+    padding-left: 20px;
+}
+
+.checkbox-label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 6px;
+    content: '';
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+    /* background-image: url(../images/...); */
+    border: 1px solid var(--color-brand-normal);
+    background-color: var(--color-brand-normal);
 }

@@ -1,0 +1,39 @@
+/* -- header section -- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 30px;
+}
+
+.header-links {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header-link {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-link:hover {
+    color: var(--color-brand-normal);
+    /* font-weight: 600; */
+}
