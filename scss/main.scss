@@ -1,0 +1,31 @@
+/* Fonts and variables */
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/texts';
+@import './utils/utils';
+
+/* Global styles */
+@import './base';
+
+/* Components styles */
+@import './components/buttons';
+@import './components/carousel-buttons';
+@import './components/chef-card';
+@import './components//format-card';
+@import './components/forms';
+@import './components/links';
+@import './components/pagination';
+@import './components/terms';
+
+/* Sections styles */
+@import './layouts/general';
+@import './layouts/header';
+@import './layouts/main-section';
+@import './layouts/mobile-menu';
+@import './layouts/modal';
+@import './layouts/advantages-section';
+@import './layouts/traditions-section';
+@import './layouts/chefs-section';
+@import './layouts/formats-section';
+@import './layouts/contacts-section';
+@import './layouts/footer';

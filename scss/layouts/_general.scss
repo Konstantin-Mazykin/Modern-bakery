@@ -1,0 +1,28 @@
+.section {
+    padding: 20px 0;
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 48px 0;
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 1.5;
+
+    @media screen and (min-width: $bp-tablet) {
+            font-size: 64px;
+            line-height: 1.3;
+        }
+
+        &--centered {
+            text-align: center;
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1272px;
+    margin: 0 auto;
+    padding: 0 16px;
+}

@@ -1,0 +1,48 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 16px;
+  padding-left: 24px;
+  background-color: var(--color-primary-light);
+  transform: translateX(100%);
+  transition: transform 0.3s;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    background-color: var(--color-primary-light);
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &__links {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: color 0.5s;
+    margin-bottom: 16px;
+
+    &:hover {
+      color: var(--color-brand-light);
+      text-decoration: none;
+    }
+  }
+
+  &__logo {
+    width: 72px;
+    height: 38px;
+    margin-bottom: 32px;
+  }
+
+  &__menu {
+    display: inline-block;
+  }
+}

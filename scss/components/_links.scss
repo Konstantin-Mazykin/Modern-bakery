@@ -1,0 +1,11 @@
+.nav-links {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-links:hover {
+    color: var(--color-brand-light);
+    /* font-weight: 600; */
+    text-decoration: none;
+}

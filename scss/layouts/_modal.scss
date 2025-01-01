@@ -1,0 +1,85 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 20px 20px;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__window {
+    position: relative;
+    max-width: 880px;
+    width: 100%;
+    max-height: 880px;
+    height: 100%;
+    padding: 48px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+    overflow-y: auto;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 128px;
+    }
+  }
+
+  &__window::after {
+    @media screen and (min-width: $bp-tablet) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      content: '';
+      width: 150px;
+      height: 235px;
+      background-image: url('../images/modal-decore.png');
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  &__text {
+    color: var(--color-brand-dark);
+    line-height: 1.15;
+    margin-bottom: 72px;
+    text-align: center;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-primary-light);
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    transition: color 0.5s;
+    transition-timing-function: linear;
+
+    @media screen and (min-width: $bp-tablet) {
+      top: 40px;
+      right: 40px;
+      font-size: 28px;
+    }
+
+    &:hover {
+      color: var(--color-brand-light);
+    }
+  }
+}
